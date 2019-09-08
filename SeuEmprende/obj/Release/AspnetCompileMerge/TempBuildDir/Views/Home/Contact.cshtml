@@ -1,0 +1,81 @@
+﻿@model SeuEmprende.Models.Registrarse
+@{
+    ViewBag.Title = "Contactanos";
+}
+
+@using (Html.BeginForm())
+{
+        <div class="container-fluid">
+
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <div class="jumbotron">
+                                <h1>Quieres emprender pero no sabes como ?</h1>
+                            </div>
+                            <div class="block-header">
+                                <h2>Si buscas ayuda, contactanos mediantes este formulario etc etc…</h2>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <form>
+                                <label>Nombre</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                        @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <label>Apellido</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                    </div>
+                                </div>
+                                <label>Edad</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        @Html.EditorFor(model => model.Edad, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                    </div>
+                                </div>
+                                <label>Telefono</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                    </div>
+                                </div>
+                                <label>Correo</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                    </div>
+                                </div>
+                                <label>A que se dedica ?</label>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        @Html.TextAreaFor(model => model.Dedicacion, new { htmlAttributes = new { @cols = "30", @rows = "5", @class = "form-control no-resize" } })
+                                    </div>
+                                </div>
+                                <label>Porque deberia de aparecer en nuestro sitio ?</label>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        @Html.TextAreaFor(model => model.Descripcion, new { htmlAttributes = new { @cols = "30", @rows = "5", @class = "form-control no-resize" } })
+                                    </div>
+                                </div>
+                                <br>
+                                <input type="submit" value="Enviar" class="btn btn-primary m-t-15 waves-effect">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <address>
+            <br />
+            <br />
+            <strong>Support:</strong>   <a href="mailto:kevin1996mejia@hotmail.com">kevin1996mejia@hotmail.com</a><br />
+        </address>
+    </footer>
+}
