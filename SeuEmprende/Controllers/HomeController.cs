@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeuEmprende.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,17 @@ namespace SeuEmprende.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(Registrarse model)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return this.View(model);
         }
 
         public ActionResult Anuncios()

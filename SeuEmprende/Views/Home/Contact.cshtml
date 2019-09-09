@@ -31,36 +31,42 @@
                                 <div class="form-group">
                                     <div class="form-line">
                                         @Html.EditorFor(model => model.Apellido, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                        @Html.ValidationMessageFor(model => model.Apellido, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <label>Edad</label>
                                 <div class="form-group">
                                     <div class="form-line">
                                         @Html.EditorFor(model => model.Edad, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                        @Html.ValidationMessageFor(model => model.Edad, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <label>Telefono</label>
                                 <div class="form-group">
                                     <div class="form-line">
                                         @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                        @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <label>Correo</label>
                                 <div class="form-group">
                                     <div class="form-line">
                                         @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido" } })
+                                        @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <label>A que se dedica ?</label>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         @Html.TextAreaFor(model => model.Dedicacion, new { htmlAttributes = new { @cols = "30", @rows = "5", @class = "form-control no-resize" } })
+                                        @Html.ValidationMessageFor(model => model.Dedicacion, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <label>Porque deberia de aparecer en nuestro sitio ?</label>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         @Html.TextAreaFor(model => model.Descripcion, new { htmlAttributes = new { @cols = "30", @rows = "5", @class = "form-control no-resize" } })
+                                        @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <br>
